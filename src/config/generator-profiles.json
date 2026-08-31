@@ -1,0 +1,106 @@
+[
+  {
+    "id": "aula",
+    "name": "Aula",
+    "description": "Salón de clase con aire acondicionado intermitente. Es el perfil sugerido en la especificación.",
+    "config": {
+      "intervalSeconds": 20,
+      "temperature": {
+        "min": 22,
+        "max": 32,
+        "base": 26.5,
+        "dailyAmplitude": 2.5,
+        "noise": 0.35
+      },
+      "humidity": {
+        "min": 45,
+        "max": 85,
+        "base": 68,
+        "dailyAmplitude": 6,
+        "noise": 1.2
+      },
+      "correlation": 0.55,
+      "anomalyRate": 0.004,
+      "anomalyMagnitude": 6,
+      "decimals": 1
+    }
+  },
+  {
+    "id": "exterior",
+    "name": "Exterior",
+    "description": "Intemperie tropical: mayor amplitud diaria y humedad alta durante la noche.",
+    "config": {
+      "intervalSeconds": 60,
+      "temperature": {
+        "min": 18,
+        "max": 36,
+        "base": 26,
+        "dailyAmplitude": 6,
+        "noise": 0.6
+      },
+      "humidity": {
+        "min": 40,
+        "max": 98,
+        "base": 74,
+        "dailyAmplitude": 14,
+        "noise": 2
+      },
+      "correlation": 0.7,
+      "anomalyRate": 0.006,
+      "anomalyMagnitude": 5,
+      "decimals": 1
+    }
+  },
+  {
+    "id": "estable",
+    "name": "Laboratorio estable",
+    "description": "Ambiente controlado, casi sin variación. Útil para comprobar que la gráfica y las estadísticas no inventan ruido.",
+    "config": {
+      "intervalSeconds": 20,
+      "temperature": {
+        "min": 20,
+        "max": 24,
+        "base": 22,
+        "dailyAmplitude": 0.3,
+        "noise": 0.08
+      },
+      "humidity": {
+        "min": 48,
+        "max": 56,
+        "base": 52,
+        "dailyAmplitude": 0.8,
+        "noise": 0.2
+      },
+      "correlation": 0.3,
+      "anomalyRate": 0,
+      "anomalyMagnitude": 0,
+      "decimals": 2
+    }
+  },
+  {
+    "id": "estres",
+    "name": "Estrés de rango",
+    "description": "Empuja los valores contra los límites del DHT22. Sirve para probar el recorte y la detección de anomalías.",
+    "config": {
+      "intervalSeconds": 20,
+      "temperature": {
+        "min": -40,
+        "max": 80,
+        "base": 30,
+        "dailyAmplitude": 25,
+        "noise": 6
+      },
+      "humidity": {
+        "min": 0,
+        "max": 100,
+        "base": 50,
+        "dailyAmplitude": 30,
+        "noise": 10
+      },
+      "correlation": 0.9,
+      "anomalyRate": 0.05,
+      "anomalyMagnitude": 8,
+      "decimals": 1
+    }
+  }
+]
